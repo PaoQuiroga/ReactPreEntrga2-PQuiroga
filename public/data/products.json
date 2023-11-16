@@ -1,0 +1,80 @@
+[
+    {
+        "id":1,
+        "nombre":"Silla Tulipa",
+        "precio":"15000",
+        "img":"./img/silla escandinava.jpg",
+        "stock":15
+    },
+    {
+        "id":2,
+        "nombre":"Silla de Jardin",
+        "precio":"8000",
+        "img":"./img/silla blanca.jpg",
+        "stock":10
+    },
+    {
+        "id":3,
+        "nombre":"Silla Roja",
+        "precio":"18000",
+        "img":"./img/silla roja.jpg",
+        "stock":18
+    },
+    {
+        "id":4,
+        "nombre":"Repisa Flotante",
+        "precio":"13000",
+        "img":"./img/repisa flotante.jpg",
+        "stock":20
+    },
+    {
+        "id":5,
+        "nombre":"Mueble Fabric",
+        "precio":"25000",
+        "img":"./img/mueble amurado.jpg",
+        "stock":15
+    },
+    {
+        "id":6,
+        "nombre":"Banqueta Negra",
+        "precio":"12000",
+        "img":"./img/silla negra.jpg",
+        "stock":18
+    },
+    {
+        "id":7,
+        "nombre":"Lampara Turca ",
+        "precio":"20000",
+        "img":"./img/luces varias.jpg",
+        "stock":20
+    },
+    {
+        "id":9,
+        "nombre":"Luces Colores",
+        "precio":"8000",
+        "img":"./img/luces deco.jpg",
+        "stock":20
+    },
+    {
+        "id":10,
+        "nombre":"Mesa Dormitorio",
+        "precio":"15000",
+        "img":"./img/mesa de luz.jpg",
+        "stock":15
+    },
+    {
+        "id":11,
+        "nombre":"Sillón de Jardín",
+        "precio": "35000",
+        "img":"./img/sillon de jardin.jpg",
+        "stock":10
+    },
+    {
+        "id":12,
+        "nombre":"Silla Jardin",
+        "precio":"25000",
+        "img":"./img/sillon caña.jpg",
+        "stock":12
+    }        
+]
+            
