@@ -22,7 +22,7 @@ const ItemCount = ({initial,stock,onAdd}) => {
             <button onClick={increment}>Incrementar</button>
             <span>{count}</span>
             <button onClick={decrement}>Decrementar</button>
-            <button onClick={()=>{onAdd(count)}}></button>
+            <button onClick={()=>{onAdd(count)}}>Agregar al carrito</button>
         </div>
     );
 };

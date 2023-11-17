@@ -1,7 +1,6 @@
 import React from "react";
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -36,26 +35,5 @@ function  NavBar() {
   );
 }
 
-/* 
-const NavBar = () => {
-      return(
-        <nav>
-
-            <h1 className="titulo">Tu Mundo Decorado</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Contacto</a></li>
-            
-            </ul>
-
-            {<CartWidget/>}
-            
-        </nav>
-        
-      )
-}  */
- 
 export default NavBar;
 
