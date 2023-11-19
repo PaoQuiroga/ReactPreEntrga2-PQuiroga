@@ -18,10 +18,8 @@ const ItemDetail = ({product}) => {
               <p>Precio:${product.precio}</p>
               <p>Categoria:{product.categoria}</p>
               <p>Descripcion:{product.descripcion}</p> 
-
-              </div>
-            
-            <ItemCount initial={1} stock={product.stock} onAdd={onAdd}/>    
+              <ItemCount initial={1} stock={product.stock} onAdd={onAdd}/>   
+              </div>            
             
         </article>        
     );

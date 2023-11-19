@@ -11,7 +11,7 @@ const ItemListContainer = () => {
     useEffect(()=>{
 
         const fetchData = () => {
-            return fetch("/data/products.json")
+            return fetch("data/products.json")
             .then((response) => response.json())
             .then((data)=>{
                 if(categoryId){
