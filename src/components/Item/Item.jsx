@@ -1,23 +1,21 @@
 import React from "react";
-import ItemCount from '../ItemCount/ItemCount'
+import "./Item.css";
+import { Link } from "react-router-dom";
 
 const Item = ({product}) => {
 
-    const onAdd = (quantity) => {
-        alert(quantity)
-    }
     return (
         <>
         <article className="contenedor">
-            <img src={product.img} alt="" />
-            <h2>{product.nombre}</h2>
+               <img src={product.img} alt={product.nombre} />
+            <Link to={`/item/${product.id}`}>
+               <h2>{product.nombre}</h2>
+            </Link>           
         </article>
-
-        <ItemCount initial={1} stock={product.stock} onAdd={onAdd}/>
-        </>
-        
-        
+       
+        </>        
     );
+   
 };
 
 export default Item;

@@ -1,31 +1,34 @@
 import React, {useState,useEffect} from 'react';
-import ItemDetail from "../ItemDetail/ItemDetail"
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from 'react-router-dom';
 
-const ItemDetailContainer = ({productId}) => {
+
+const ItemDetailContainer = () => {
     
-    const [product, setProduct] = useState(null)
+    const [product, setProduct] = useState(null)    
+    const {idProduct} = useParams()
 
     useEffect(()=>{
         const fetchData = () => {
             return fetch("/data/products.json")
-            .them((response)=>response.json)
-            .them((data)=>{
-                const foundProduct = data.find((item)=> item.id == productId)
+            .then((response)=>response.json())
+            .then((data)=>{
+                const foundProduct = data.find((item)=> item.id == idProduct)
                 setProduct(foundProduct)
             })
             .catch((error)=>console.log(error))
         }
 
         fetchData()
-    },[productId])
+    },[idProduct])
 
     return (
         <div>
     {
-        product ? <ItemDetail producto={product}/> : <p>CARGANDO...</p>
+        product ? <ItemDetail product={product}/> : <p>CARGANDO...</p>
 
         }
-    
+
         </div>
     );
     
