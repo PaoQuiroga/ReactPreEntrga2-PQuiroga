@@ -14,12 +14,16 @@ const ItemCount = ({initial,stock,onAdd}) => {
             setCount(count -1)
         }
     }
+
+    const addToCart =() => {
+        onAdd(count)
+    }
     return (
         <div>
             <button onClick={increment}>Incrementar</button>
             <span>{count}</span>
             <button onClick={decrement}>Decrementar</button>
-            <button onClick={()=>{onAdd(count)}}>Agregar al carrito</button>
+            <button onClick={addToCart}>Agregar al carrito</button>
         </div>
     );
 };

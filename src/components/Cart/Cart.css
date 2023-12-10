@@ -1,0 +1,62 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+div div.carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: 50px;
+  }
+   
+  div.carrito img {
+    max-width: 30%;
+    height: auto;
+
+  } 
+  
+   div.carrito a{
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.5em;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: #252121;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }  
+    
+  
+  .price {
+    color: rgb(58, 54, 54);
+    font-size: 22px;
+  }
+  
+  div.carrito button{
+    border-radius: 0.5em;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: #252121;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  div p.contador{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 55px;
+    right: 14px;
+    position: absolute;
+}

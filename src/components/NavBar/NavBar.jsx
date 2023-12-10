@@ -24,8 +24,11 @@ import {Link } from 'react-router-dom';
              <Link to={"/"}>
                 <h1 className="titulo">Tu Mundo Decorado</h1> 
              </Link>
-              <CartWidget/>
+              
             </ul>    
+
+            <CartWidget/>
+            
         </nav>      
     );
 
