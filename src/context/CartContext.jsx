@@ -8,7 +8,7 @@ export const CartProvider = ({children}) => {
     const [cantidadTotal,setCantidadTotal] = useState(0)
 
     const addToCart = (product,cantidad) => {
-        const productoExistente = cart.find(prod => prod.product.id == prod.product.id)
+        const productoExistente = cart.find(prod => prod.product.id == product.id)
         if(!productoExistente) {
             setCart(prev => [...prev,{product,cantidad}])
             setCantidadTotal(prev => prev + cantidad)
