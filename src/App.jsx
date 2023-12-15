@@ -7,9 +7,9 @@ import Cart from './components/Cart/Cart';
 import Error from './components/Error/Error';
 import { CartProvider } from './context/CartContext';
 import Checkout from './components/Checkout/Checkout';
+import { useEffect, useState } from 'react';
 
 function App() {
-
 
   return (
      <>
@@ -24,13 +24,13 @@ function App() {
             <Route path= '/:categoryId' element={<ItemListContainer/>}/>
             <Route path= '/item/:idProduct' element={<ItemDetailContainer/>}/>
             <Route path= '/Cart' element={<Cart/>}/>
-            <Route path= '/Checkout' element={<Checkout/>}/>
+            <Route path= '/Checkout' element={<Checkout/>}></Route>
             <Route path= '#' element={<Error/>}/>
           </Routes>
 
         </CartProvider>
        
-       </BrowserRouter>}
+       </BrowserRouter>}  
    </> 
        
   );

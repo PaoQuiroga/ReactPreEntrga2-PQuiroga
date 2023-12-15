@@ -16,7 +16,10 @@
   text-align: center;
   padding-top: 50px;
 }
-
+img{
+  max-width: 100%;
+  height: auto;
+}
 .card-description p{
   padding: 10px;
 }

@@ -8,15 +8,15 @@ export const CartProvider = ({children}) => {
     const [cantidadTotal,setCantidadTotal] = useState(0)
 
     const addToCart = (product,cantidad) => {
-        const productoExistente = cart.find(prod => prod.product.id == product.id)
-        if(!productoExistente) {
-            setCart(prev => [...prev,{product,cantidad}])
-            setCantidadTotal(prev => prev + cantidad)
-            setTotal(prev => prev + (product.precio * cantidad))
+        const productExistente = cart.find(prod => prod.product.id == product.id)
+        if(!productExistente) {
+            setCart(prev => [...prev,{product,cantidad}]);
+            setCantidadTotal(prev => prev + cantidad);
+            setTotal(prev => prev + product.precio * cantidad);
         }else{
             const carritoRender = cart.map(prod => {
-                if(prod.product.id === prod.product.id){
-                    return {...prod,cantidad: prod.cantidad+cantidad}
+                if(prod.product.id === product.id){
+                    return {...prod,cantidad: prod.cantidad + cantidad}
                 }else{
                     return prod;
                 }
@@ -24,7 +24,7 @@ export const CartProvider = ({children}) => {
 
             setCart(carritoRender);
             setCantidadTotal(prev => prev + cantidad);
-            setTotal(prev => prev + (product.precio * cantidad))
+            setTotal(prev => prev + product.precio * cantidad);
         }
     }
 
@@ -33,7 +33,7 @@ export const CartProvider = ({children}) => {
         const carritoRender = cart.filter(prod => prod.product.id !==id)
         setCart(carritoRender);
         setCantidadTotal(prev => prev - productoEliminado.cantidad)
-        setTotal(prev => prev - productoEliminado.product.precio *productoEliminado.cantidad)
+        setTotal(prev => prev - productoEliminado.product.precio *productoEliminado.cantidad);
     }
 
     const clearCart = () => {

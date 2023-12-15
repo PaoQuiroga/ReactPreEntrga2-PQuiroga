@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import './index.css'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import './index.css'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCgg7XcBO0lW-fK12pgB1b4jFQIBQXgEus",

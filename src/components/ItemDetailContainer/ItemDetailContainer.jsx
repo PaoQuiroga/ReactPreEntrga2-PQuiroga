@@ -6,31 +6,27 @@ import { getFirestore,doc,getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     
-    const [product, setProduct] = useState(null)    
+    const [products, setProduct] = useState([])    
     const {idProduct} = useParams()
 
     useEffect(()=>{
         const db = getFirestore()
 
-        const nuevoDoc = doc(db,"product",idProduct)
+        const nuevoDoc = doc(db,"products",idProduct)
         getDoc(nuevoDoc)
         .then(res =>{
             const data = res.data();
-            const nuevoProduct = {id: res.id,...data}
-            setProduct(nuevoProduct)
+            const nuevoProducto = {id: res.id,...data}
+            setProduct(nuevoProducto)
         })
         .catch(error => console.log(error))
-
-
-    
-
 
     },[idProduct])
 
     return (
         <div>
     {
-        product ? <ItemDetail product={product}/> : <p>CARGANDO...</p>
+        products ? <ItemDetail product={products}/> : <p>CARGANDO...</p>
 
         }
 

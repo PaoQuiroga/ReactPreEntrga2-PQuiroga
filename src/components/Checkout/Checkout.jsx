@@ -11,9 +11,9 @@ const Checkout = () => {
     const [error,setError] = useState("");
     const [ordenId,setOrdenId] = useState("")
 
-    const {cart,total,cantidadTotal,vaciarCarrito} = useContext(CartContext)
+    const {cart,total,cantidadTotal,clearCart} = useContext(CartContext)
     const manejadorFormulario = (event) =>{
-        event.preventDefault()
+        event.preventDefault();
         if(!nombre || !apellido || !telefono || !email || !emailConfirmacion){
             setError("Completar los datos requeridos");
             return;
@@ -24,10 +24,10 @@ const Checkout = () => {
         }
         const db = getFirestore()
         const orden = {
-            items: cart.map((product)=> ({
-                id: product.product.id,
-                nombre: product.product.nombre,
-                cantidad: product.cantidad
+            items: cart.map((products)=> ({
+                id: products.product.id,
+                nombre: products.product.nombre,
+                cantidad: products.cantidad
             })),
             total: total,
             fecha: new Date(),
@@ -42,10 +42,8 @@ const Checkout = () => {
             const productDoc = await getDoc(productRef);
             const stockActual = productDoc.data().stock;
 
-            console.log(stockActual)
-
             await updateDoc(productRef,{
-                stock: stockActual - productOrden.cantidad
+                stock: stockActual = productOrden.cantidad,
             })
         })
     )
@@ -62,7 +60,7 @@ const Checkout = () => {
     })
         .catch((error) => {
             console.log("No se pudo actualizar el stock", error)
-            setError("No se puede actualizar el stock, inténtelo más tarde");
+            setError("No se puede actualizar el stock, inténtelo nuevamente");
     });
 }
     return (
@@ -71,12 +69,12 @@ const Checkout = () => {
             
              <form onSubmit={manejadorFormulario} className="formulario">
 
-                {cart.map((product) => {
-                    <div key={product.product.id}>
+                {cart.map((products) => {
+                    <div key={products.product.id}>
                         <p>
                             {" "}
-                            {product.product.nombre} x {product.cantidad}{" "}</p>
-                        <p>{product.product.precio}</p>
+                            {products.product.nombre} x {products.cantidad}{" "}</p>
+                        <p>{products.product.precio}</p>
                         <hr />
                     </div>
                 })}
@@ -110,7 +108,7 @@ const Checkout = () => {
             <button type= 'submit'>Comprar</button>
             {
                 ordenId && (
-                    <strong>
+                    <strong className="orderId">
                         <p>Gracias por su Compra!! Tu Número de Orden es: {ordenId}{" "}</p> 
                     </strong>    
                 )}
