@@ -6,7 +6,7 @@ import { getFirestore,doc,getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     
-    const [products, setProduct] = useState([])    
+    const [product, setProduct] = useState([])    
     const {idProduct} = useParams()
 
     useEffect(()=>{
@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     return (
         <div>
     {
-        products ? <ItemDetail product={products}/> : <p>CARGANDO...</p>
+        product ? <ItemDetail product={product}/> : <p>CARGANDO...</p>
 
         }
 

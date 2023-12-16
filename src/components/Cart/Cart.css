@@ -14,9 +14,8 @@ div div.carrito {
   }
    
   div.carrito img {
-    max-width: 30%;
+    max-width: 10%;
     height: auto;
-
   } 
   
    div.carrito a{
@@ -27,13 +26,11 @@ div div.carrito {
     padding: 10px;
     color: white;
     background-color: #252121;
-    text-align: center;
     cursor: pointer;
-    width: 100%;
+    width: 20%;
     font-size: 18px;
-  }  
-    
-  
+  }    
+ 
   .price {
     color: rgb(58, 54, 54);
     font-size: 22px;
@@ -42,12 +39,13 @@ div div.carrito {
   div.carrito button{
     border-radius: 0.5em;
     outline: 0;
-    padding: 10px;
+    padding: 5px;
+    margin: 5px;
     color: white;
     background-color: #252121;
     text-align: center;
     cursor: pointer;
-    width: 100%;
+    width: 20%;
     font-size: 18px;
   }
   div p.contador{

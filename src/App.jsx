@@ -7,7 +7,6 @@ import Cart from './components/Cart/Cart';
 import Error from './components/Error/Error';
 import { CartProvider } from './context/CartContext';
 import Checkout from './components/Checkout/Checkout';
-import { useEffect, useState } from 'react';
 
 function App() {
 

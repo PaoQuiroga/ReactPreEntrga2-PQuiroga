@@ -20,18 +20,18 @@ const ItemListContainer = () => {
 
         getDocs(misProducts)
         .then((res)=>{
-            const nuevosProducts = res.docs.map((doc)=>{
+            const nuevosProductos = res.docs.map((doc)=>{
                 const data = doc.data()
                 return {id: doc.id,...data}
             })
-            setProducts(nuevosProducts)
+            setProducts(nuevosProductos)
         })
         .catch((error) => console.log(error))
         .finally(()=>{
             setLoading(false)
         })
 
-    },[categoryId])
+    },[categoryId]);
 
     return (
         <>
